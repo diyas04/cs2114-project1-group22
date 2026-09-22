@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class thirdYear {
 
     // aero + ocean
@@ -327,8 +325,12 @@ public class thirdYear {
             }
         }
 
-        courses = Arrays.copyOf(courses, courses.length + 1);
-        courses[courses.length - 1] = courseName;
+        String[] newCourses = new String[courses.length + 1];
+        for (int i = 0; i < courses.length; i++) {
+            newCourses[i] = courses[i];
+        }
+        newCourses[newCourses.length - 1] = courseName;
+        courses = newCourses;
 
         return true;
     }
