@@ -144,6 +144,8 @@ import java.awt.event.ActionListener;
                     return;
                 }
 
+              
+
               //test code to see if everything is selected
                // System.out.println("Everything is selected!");
 
@@ -157,6 +159,9 @@ import java.awt.event.ActionListener;
               * you are using this, the "Select..." item is at index 0
               * then the actual majors and minors are at index 1 and up
               */
+              
+                /*Test/example code for the dropdown
+                
                 String year = (String)yearDropdown.getSelectedItem();
                 System.out.println("Year selected: " + year);
 
@@ -173,7 +178,7 @@ import java.awt.event.ActionListener;
                 else if (minorQuestionDropdown.getSelectedIndex() == 1) {
                     String minor = (String)minorDropdown.getSelectedItem();
                     System.out.println("Minor selected: " + minor);
-                }
+                } */
 
             }
         });
