@@ -73,7 +73,7 @@ public class Minor {
     * @param minor String array of the courses for the major
     * @return String array of the combined major and minor courses
     */
-  public String[] addMinorCourses(String[] majorCourses) {
+  public String[] includeMinor(String[] majorCourses) {
     if (majorCourses.equals(null)) {
       return;
     }
