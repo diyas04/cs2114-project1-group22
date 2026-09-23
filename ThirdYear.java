@@ -1,4 +1,4 @@
-public class thirdYear {
+public class ThirdYear {
 
     // aero + ocean
 
