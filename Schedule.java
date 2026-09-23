@@ -222,7 +222,6 @@ public String scheduleMake() {
 public String minorScheduleMake() {
   timetable = scheduleMake();
   Minor min = new Minor();
-  min.sortMinor(minor);
   courses = min.includeMinor(courses);
   for (String course : courses) {
     timetable += course + "\n";
