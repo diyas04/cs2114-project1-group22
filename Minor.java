@@ -71,12 +71,32 @@ public class Minor {
     * Adds courses from minor to the schedule.
     *
     * @param minor String array of the courses for the major
+    * @return String array of the combined major and minor courses
     */
-  public void addMinorCourses(String[] majorCourses) {
+  public String[] addMinorCourses(String[] majorCourses) {
     if (majorCourses.equals(null)) {
       return;
     }
-    
+    for (String minorCourse : courses) {
+      for (String majorCourse : majorCourses) {
+        String course = majorCourse;
+        if (course.startsWith("Fall: ")) {
+          course = course.substring(6);
+        }
+        else if (course.startsWith("Spring: ")) {
+          course = course.substring(8);
+        }
+        if (course.equalsIgnoreCase(minorCourse)) {
+          break;
+        }
+      }
+      String[] withMinor = new String[majorCourses.length + 1];
+      for (int i = 0; i < majorCourses.length; i++) {
+        withMinor[i] = majorCourses[i];
+      }
+      withMinor[withMinor.length - 1] = "Minor: " + minorCourse;
+    }
+    return withMinor;
   }
 
    /**
@@ -85,7 +105,6 @@ public class Minor {
     public String[] getCourses() {
         return courses;
     }
-
 
     /**
      * Adds a course to the current schedule.
