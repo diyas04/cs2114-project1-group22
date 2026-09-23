@@ -10,23 +10,23 @@ public class Minor {
                              "Naval Engineering", 
                              "Nuclear Engineering"};
   // biomedical
-  private String[] biomed = {"BMES 2104", "BMES 4064"};
+  private String[] biomed = {"BMES 2104", "BMES 4064", "BMES 3004", "BMES 3124", "BMES 3134", "BMES 3144", "BMES 3154", "BMES 3164", "BMES 3224", "BMES 3704", "BMES 4034", "BMES 4084", "BMES 4134", "BMES 4154"};
   // cs
-  private String[] cs = {"CS 1114", "CS 2114", "MATH 2534", "CS 2505", "CS 3114"};
+  private String[] cs = {"CS 1114", "CS 2114", "MATH 2534", "CS 2505", "CS 3114", "CS 3214", "CS 4104"};
   // cybersecurity
-  private String[] cyber = {"ECE 4560", "CS 4264", "ECE/CS 5560"};
+  private String[] cyber = {"ECE 4560", "CS 4264", "ECE/CS 5560", "ECE 3564", "CS 3214", "ACIS 4684", "CS 4274", "ECE 4944"};
   // human-computer interactions
-  private String[] hci = {"HIST/SOC/STS 2604", "COMM 2084", "CS 3724"};
+  private String[] hci = {"HIST/SOC/STS 2604", "COMM 2084", "CS 3724", "IDS 2214", "CS 3714", "CS 4774"};
   // ai
-  private String[] ai = {"CS 1114", "CS 2104", "CS 3804"};
+  private String[] ai = {"CS 1114", "CS 2104", "CS 3804", "PHIL 3334", "GEOG 4094", "MKTG 4114"};
   // engineering science and mechanics
-  private String[] esm = {"ESM 2104", "ESM 2204", "ESM 2304"};
+  private String[] esm = {"ESM 2104", "ESM 2204", "ESM 2304", "ESM 3234", "ESM 3124", "ESM 4105", "AOE 4065"};
   // green engineering
-  private String[] green = {"ENGR 3124", "ENGR 4134"};
+  private String[] green = {"ENGR 3124", "ENGR 4134", "BC 3014", "CHE 3144", "AAEC 3314", "ARCH 4055"};
   // naval
-  private String[] naval = {"AOE 2204", "AOE 4264", "AOE 4244"};
+  private String[] naval = {"AOE 2204", "AOE 4264", "AOE 4244", "AOE 3134", "AOE 3154", "ECE 3054"};
   // nuclear
-  private String[] nuclear = {"MATH 2214", "NSEG 3145", "NSEG 3146", "NSEG 3604"};
+  private String[] nuclear = {"MATH 2214", "NSEG 3145", "NSEG 3146", "NSEG 3604", "NSEG 4204", "NSEG 4974"};
 
   private String[] courses = {};
 
