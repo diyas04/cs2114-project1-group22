@@ -68,9 +68,14 @@ public class Minor {
   }
 
   /**
+    * Adds courses from minor to the schedule.
     *
+    * @param minor String array of the courses for the major
     */
-  public void addMinorCourses(String[] minor) {
+  public void addMinorCourses(String[] majorCourses) {
+    if (majorCourses.equals(null)) {
+      return;
+    }
     
   }
 
@@ -85,6 +90,7 @@ public class Minor {
     /**
      * Adds a course to the current schedule.
      *
+     * @param courseName String name of the course
      * @return true if the course was added, false otherwise
      */
     public boolean addCourse(String courseName) {
@@ -113,6 +119,7 @@ public class Minor {
     /**
      * Removes a course from the current schedule.
      *
+     * @param courseName String name of the course
      * @return true if the course was removed, false otherwise
      */
     public boolean removeCourse(String courseName) {
