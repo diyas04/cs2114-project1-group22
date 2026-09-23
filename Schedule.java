@@ -186,52 +186,52 @@ import java.awt.event.ActionListener;
     
   }
 
-public String mainExecution() {
-  if (minorQuestion.equals("Yes")) {
-    return minorScheculeMake();
+  public String mainExecution() {
+    if (minorQuestion.equals("Yes")) {
+      return minorScheculeMake();
+    }
+    else {
+      return scheduleMake();
+    }
   }
-  else {
-    return scheduleMake();
+  
+  public String scheduleMake() {
+    String[] courses = {};
+    if (year.equals("First Year")) {
+      FirstYear first = new FirstYear();
+      first.sortMajor(major);
+      courses = first.getCourses();
+    }
+    else if (year.equals("Second Year")) {
+      SecondYear second = new SecondYear();
+      second.sortMajor(major);
+      courses = second.getCourses();
+    }
+    else if (year.equals("Third Year")) {
+      ThirdYear third = new ThirdYear();
+      third.sortMajor(major);
+      courses = third.getCourses();
+    }
+    else if (year.equals("Fourth Year")) {
+      FourthYear fourth = new FourthYear();
+      fourth.sortMajor(major);
+      courses = fourth.getCourses();
+    }
+    String timetable = "";
+    for (String course : courses) {
+      timetable += course + "\n";
+    }
+    return timetable;
   }
-}
-
-public String scheduleMake() {
-  String[] courses = {};
-  if (year.equals("First Year")) {
-    FirstYear first = new FirstYear();
-    first.sortMajor(major);
-    courses = first.getCourses();
+  
+  public String minorScheduleMake() {
+    timetable = scheduleMake();
+    Minor min = new Minor();
+    courses = min.includeMinor(courses);
+    for (String course : courses) {
+      timetable += course + "\n";
+    }
+    return timetable;
   }
-  else if (year.equals("Second Year")) {
-    SecondYear second = new SecondYear();
-    second.sortMajor(major);
-    courses = second.getCourses();
-  }
-  else if (year.equals("Third Year")) {
-    ThirdYear third = new ThirdYear();
-    third.sortMajor(major);
-    courses = third.getCourses();
-  }
-  else if (year.equals("Fourth Year")) {
-    FourthYear fourth = new FourthYear();
-    fourth.sortMajor(major);
-    courses = fourth.getCourses();
-  }
-  String timetable = "";
-  for (String course : courses) {
-    timetable += course + "\n";
-  }
-  return timetable;
-}
-
-public String minorScheduleMake() {
-  timetable = scheduleMake();
-  Minor min = new Minor();
-  courses = min.includeMinor(courses);
-  for (String course : courses) {
-    timetable += course + "\n";
-  }
-  return timetable;
-}
 
 }
