@@ -234,4 +234,36 @@ import java.awt.event.ActionListener;
     return timetable;
   }
 
+  /**
+  * Validation for the dropdown menus. If entry is null or still on "Select", an InvalidDropdownException is thrown.
+  *
+  * @param yearDropdown The input from the dropdown for the year selection
+  * @param majorDropdown The input from the dropdown for the major selection
+  * @param minorQuestionDropdown The input from the dropdown for the minor question selection
+  * @param minorDropdown The input from the dropdown for the minor selection
+  */
+  public void dropDownValid(JComboBox<String> yearDropdown, 
+                               JComboBox<String> majorDropdown, 
+                               JComboBox<String> minorQuestionDropdown, 
+                               JComboBox<String> minorDropdown) throws InvalidDropdownException{
+    if (yearDropdown.getSelectedItem() == null || yearDropdown.getSelectedIndex() == 0) {
+      throw new InvalidDropdownException("Please select a year");
+    }
+    if (majorDropdown.getSelectedItem() == null || majorDropdown.getSelectedIndex() == 0) {
+      throw new InvalidDropdownException("Please select a major");
+    }
+    if (minorQuestionDropdown.getSelectedItem() == null || minorQuestionDropdown.getSelectedIndex() == 0) {
+       throw new InvalidDropdownException("Please select if you want a minor.");
+    }
+    if (minorDropdown.getSelectedItem() == null || minorDropdown.getSelectedIndex() == 0) {
+       throw new InvalidDropdownException("Please select a minor");
+    }
+    year = (String) yearDropdown.getSelectedItem();
+    major = (String) majorDropdown.getSelectedItem();
+    minorQuestion = (String) minorQuestionDropdown.getSelectedItem();
+    if (minorQuestion().equals("Yes")) {
+      minor = (String) minorDropdown.getSelectedItem();
+    }
+  }
+
 }
