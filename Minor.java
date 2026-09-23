@@ -28,6 +28,8 @@ public class Minor {
   // nuclear
   private String[] nuclear = {"MATH 2214", "NSEG 3145", "NSEG 3146", "NSEG 3604"};
 
+  private String[] courses = {};
+
   /**
     * Adds minor classes 
     */
@@ -35,6 +37,33 @@ public class Minor {
     // uses the minor to find what classes need to be added, doesn't add classes already in array
     if (minor.equals(null)) {
       return;
+    }
+    if (minor.equals("Biomedical Engineering")) {
+      courses = biomed;
+    }
+    else if (minor.equals("Computer Science")) {
+      courses = cs;
+    }
+    else if (minor.equals("Cybersecurity")) {
+      courses = cyber;
+    }
+    else if (minor.equals("Human-Computer Interactions")) {
+      courses = hci;
+    }
+    else if (minor.equals("Artificial Intelligence")) {
+      courses = ai;
+    }
+    else if (minor.equals("Engineering Science and Mechanics")) {
+      courses = esm;
+    }
+    else if (minor.equals("Green Engineering")) {
+      courses = green;
+    }
+    else if (minor.equals("Naval Engineering")) {
+      courses = naval;
+    }
+    else if (minor.equals("Nuclear Engineering")) {
+      courses = nuclear;
     }
   }
 
