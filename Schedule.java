@@ -186,4 +186,48 @@ import java.awt.event.ActionListener;
     
   }
 
+public String mainExecution() {
+  return "";
+}
+
+public String scheduleMake() {
+  String[] courses = {};
+  if (year == 1) {
+    FirstYear first = new FirstYear();
+    first.sortMajor(major);
+    courses = first.getCourses();
+  }
+  else if (year == 2) {
+    SecondYear second = new SecondYear();
+    second.sortMajor(major);
+    courses = second.getCourses();
+  }
+  else if (year == 3) {
+    ThirdYear third = new ThirdYear();
+    third.sortMajor(major);
+    courses = third.getCourses();
+  }
+  else if (year == 4) {
+    FourthYear fourth = new FourthYear();
+    fourth.sortMajor(major);
+    courses = fourth.getCourses();
+  }
+  String timetable = "";
+  for (String course : courses) {
+    timetable += course + "\n";
+  }
+  return timetable;
+}
+
+public String minorScheduleMake() {
+  timetable = scheduleMake();
+  Minor min = new Minor();
+  min.sortMinor(minor);
+  courses = min.includeMinor(courses);
+  for (String course : courses) {
+    timetable += course + "\n";
+  }
+  return timetable;
+}
+
 }
